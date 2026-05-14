@@ -12,8 +12,8 @@ public class Interface {
     }
 
     private void init(){
-        DealershipFileManager dealershipFileManager = new DealershipFileManager();
-        this.dealership = dealershipFileManager.getDealership();
+        DealershipFileManager manager = new DealershipFileManager();
+        this.dealership = manager.getDealership();
     }
 
     public void display(){
