@@ -23,7 +23,7 @@ public class Interface {
 
         while (isRunning) {
             System.out.println("""
-                                        Menu:
+                                       Menu:
                             1 - Find vehicles within a price range
                             2 - Find vehicles by make / model
                             3 - Find vehicles by year range
@@ -179,8 +179,4 @@ public class Interface {
 
         }
     }
-//    public static String askForText(String prompt) {
-//        System.out.print(prompt);
-//        return input.nextLine();
-//    }
 }
