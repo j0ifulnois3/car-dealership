@@ -8,7 +8,7 @@ public class Interface {
     //field
     private Dealership dealership;
 
-    public UserInterface() {
+    public Interface() {
     }
 
     private void init(){
