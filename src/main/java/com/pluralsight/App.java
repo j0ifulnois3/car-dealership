@@ -6,4 +6,12 @@ public class App {
 
         Interface.display();
     }
+
+
+    /*
+    choose a car: vin
+    sellect contract type: lease/sale
+    implement vin within contract
+    display contract + validate
+     */
 }

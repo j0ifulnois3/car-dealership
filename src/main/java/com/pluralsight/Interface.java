@@ -62,6 +62,15 @@ public class Interface {
         }
     }
 
+    public void getByVin(){
+        System.out.print("Enter Vin: ");
+        int userChoiceVin = Integer.parseInt(input.nextLine());
+
+        ArrayList<Vehicle> vehicles = dealership.getVehiclesByVin(userChoiceVin);
+
+        displayVehicles(vehicles);
+    }
+
     public void getByPriceRange() {
         System.out.print("Type minimum price: ");
         double userChoiceMin = Double.parseDouble(input.nextLine());
@@ -177,6 +186,32 @@ public class Interface {
                     vehicle.getOdometer(),
                     vehicle.getPrice());
 
+
+        getByVin();
+        }
+    }
+
+    //sale/lease
+    /*
+    list vehicle options ✅
+    choose a vehicle ✅
+    choose contract type 1/2
+     + implement veh into cont.
+    display contract
+     */
+    public void contractOption(){
+        boolean contract = true;
+
+        while(contract){
+            System.out.println("""
+                    1 - Sale
+                    2 - Lease""");
+            int userOption = input.nextInt();
+
+            switch(userOption){
+                case 1 -> displaySalesContract();
+                case 2 -> ;
+            }
         }
     }
 }

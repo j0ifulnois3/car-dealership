@@ -1,13 +1,16 @@
 package com.pluralsight;
 
-public class SalesContract {
+import java.util.ArrayList;
+
+public class SalesContract extends Contract{
     private double salesTax;
     private double recordingFee;
     private double processingFee;
     private boolean willFinance;
     private double monthlyPayment;
 
-    public SalesContract(double salesTax, double recordingFee, double processingFee, boolean willFinance) {
+    public SalesContract(String contractDate, String name, String email, boolean isSold, double salesTax, double recordingFee, double processingFee, boolean willFinance) {
+        super(contractDate, name, email, isSold);
         this.salesTax = salesTax;
         this.recordingFee = recordingFee;
         this.processingFee = processingFee;
@@ -23,7 +26,7 @@ public class SalesContract {
     }
 
     public double getRecordingFee() {
-        return recordingFee;
+        return 100;
     }
 
     public void setRecordingFee(double recordingFee) {
@@ -48,7 +51,25 @@ public class SalesContract {
 
     @Override
     public double getTotalPrice(){
-
-       return (recordingFee + processingFee + (getPrice * salesTax);
+//        ArrayList<Vehicle> result = new ArrayList<>();
+//
+//        for (Vehicle vehicle : inventory){
+//                    double price = salesTax * vehicle.getPrice();
+//                    price += getRecordingFee();
+//
+//
+//                };
+        return getTotalPrice();
     }
+
+    @Override
+    public double getMonthlyPayment() {
+        return 0;
+    }
+
+    public String displaySalesContract(){
+        return "contract";
+    }
+
+
 }

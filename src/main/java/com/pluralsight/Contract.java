@@ -8,6 +8,7 @@ public abstract class Contract {
     private double totalPrice;
     private double monthlyPayment;
 
+
     public Contract(String contractDate, String name, String email, boolean isSold) {
         this.contractDate = contractDate;
         this.name = name;
