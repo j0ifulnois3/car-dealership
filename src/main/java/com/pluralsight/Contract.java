@@ -7,7 +7,7 @@ public abstract class Contract {
     private boolean isSold;
     private double totalPrice;
     private double monthlyPayment;
-
+public Contract(){}
 
     public Contract(String contractDate, String name, String email, boolean isSold) {
         this.contractDate = contractDate;

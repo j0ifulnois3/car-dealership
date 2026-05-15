@@ -67,8 +67,14 @@ public class Interface {
         int userChoiceVin = Integer.parseInt(input.nextLine());
 
         ArrayList<Vehicle> vehicles = dealership.getVehiclesByVin(userChoiceVin);
-
+     for (Vehicle vehicle : vehicles){
+         if (vehicle.getVin() == userChoiceVin) {
+             vehicle.getPrice();
+         }
+     }
+        contractOption();
         displayVehicles(vehicles);
+
     }
 
     public void getByPriceRange() {
@@ -201,7 +207,7 @@ public class Interface {
      */
     public void contractOption(){
         boolean contract = true;
-
+SalesContract salesContract = new SalesContract();
         while(contract){
             System.out.println("""
                     1 - Sale
@@ -209,8 +215,7 @@ public class Interface {
             int userOption = input.nextInt();
 
             switch(userOption){
-                case 1 -> displaySalesContract();
-                case 2 -> ;
+                case 1 -> salesContract.displaySalesContract();
             }
         }
     }
